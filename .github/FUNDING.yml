@@ -1,0 +1,11 @@
+# GitHub Sponsorship Configuration
+# Bu dosya projenizde sponsorluk butonlarını aktif eder
+
+# GitHub Sponsors kullanıcı adınızı buraya ekleyin
+github: [agiulucom42-del]
+
+# Diğer sponsorluk platformları (isteğe bağlı)
+# patreon: kullaniciadi
+# ko_fi: kullaniciadi
+# buy_me_a_coffee: kullaniciadi
+# custom: ["https://yourwebsite.com/donate"]
