@@ -1,0 +1,40 @@
+GitAura Projesi Yol Haritası
+Az önce en kritik güvenlik sorununu çözdük. Şimdi projenizi bir sonraki seviyeye taşımak için odaklanmamız gereken adımlar şunlar:
+
+Faz 1: Sağlamlaştırma ve Teknik Borç Azaltma (Hemen Başlanacak Adımlar)
+Bu fazın amacı, projenin temelini güçlendirmek ve gelecekteki geliştirmeleri kolaylaştırmaktır.
+
+Test Altyapısı Kurulumu:
+
+Ne yapılacak? Projeye vitest gibi modern bir test kütüphanesi ekleyerek otomatik testler yazmaya başlamak.
+Neden önemli? Yeni özellikler eklerken veya kodda değişiklik yaparken mevcut fonksiyonların bozulmadığından emin olmak için bu kritik bir adımdır. İlk olarak githubService gibi servislerin testleri yazılabilir.
+Kodun Yeniden Düzenlenmesi (Refactoring):
+
+Ne yapılacak? App.tsx dosyası şu an çok büyük ve karmaşık. Bu dosyanın içindeki mantığı useHistory, useAnalysis gibi daha küçük ve yönetilebilir özel kancalara (custom hooks) bölmek.
+Neden önemli? Kodun okunabilirliğini artırır ve gelecekte bakımını çok daha kolay hale getirir.
+Dağıtım (Deployment) Doğrulaması:
+
+Ne yapılacak? Projeyi Vercel veya Netlify gibi bir platforma dağıtarak oluşturduğumuz yeni güvenli API (/api/analyze) fonksiyonunun canlı ortamda doğru çalıştığından emin olmak.
+Neden önemli? Güvenlik düzeltmesinin sadece yerelde değil, gerçek kullanıcıların erişeceği ortamda da çalıştığını garanti altına alır.
+Faz 2: Özellik Geliştirme ve Kullanıcı Deneyimi (Orta Vadeli Adımlar)
+Bu faz, projenin temel özelliklerini geliştirmeye ve kullanıcılar için daha çekici hale getirmeye odaklanır.
+
+Analiz Yeteneklerini Genişletme:
+
+Ne yapılacak? Mevcut "Pazarlama", "Kod Kalitesi" ve "Dokümantasyon" analiz modlarına ek olarak yeni modüller eklemek. Örneğin, bir "Güvenlik Analizi" modu (yaygın zafiyetleri kontrol eden) veya bir "Performans Analizi" modu (bağımlılıkları inceleyen) eklenebilir.
+Neden önemli? Uygulamanın sunduğu değeri artırır ve daha geniş bir kullanıcı kitlesine hitap etmesini sağlar.
+Kullanıcı Hesapları ve Geçmiş Kaydı:
+
+Ne yapılacak? Kullanıcıların GitHub hesapları ile giriş yapmasını sağlayan bir sistem kurmak. Bu sayede kullanıcılar yaptıkları tüm analizleri kendi profillerinde saklayabilir ve projelerinin zaman içindeki gelişimini takip edebilirler.
+Neden önemli? Kullanıcı bağlılığını artırır ve "Pro" özellikler için bir zemin hazırlar.
+Faz 3: Büyüme ve Sürdürülebilirlik (Uzun Vadeli Adımlar)
+Bu faz, projenin popülerliğini artırmaya ve potansiyel olarak gelir elde etmeye odaklanır.
+
+"Pro" Özelliklerin Tamamlanması:
+
+Ne yapılacak? Kodda zaten ipuçları bulunan ücretli özellikleri (örneğin, daha detaylı raporlar, özel analizler, takım özellikleri) tam olarak geliştirmek ve bir ödeme sistemi entegre etmek.
+Neden önemli? Projenin bakım ve geliştirme masraflarını karşılayarak sürdürülebilir olmasını sağlar.
+GitHub Entegrasyonu:
+
+Ne yapılacak? Bir GitHub Action oluşturmak. Bu Action, bir projeye yeni kod eklendiğinde (pull request) otomatik olarak GitAura analizini çalıştırır ve sonucu doğrudan GitHub'da gösterir.
+Neden önemli? Projenin geliştiricilerin iş akışına doğrudan entegre olmasını sağlayarak kullanımını ve popülerliğini patlatma potansiyeli taşır.
